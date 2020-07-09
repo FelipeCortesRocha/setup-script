@@ -42,8 +42,8 @@ code --install-extension pkief.material-icon-theme
 code --install-extension ms-python.python
 code --install-extension tht13.python
 code --install-extension wakatime.vscode-wakatime
-code --install-extension wakatime.gruntfuggly.todo-tree
-code --install-extension wakatime.kruemelkatze.vscode-dashboard
+code --install-extension gruntfuggly.todo-tree
+code --install-extension kruemelkatze.vscode-dashboard
 
 echo 'installing spotify' 
 snap install spotify

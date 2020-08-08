@@ -1,20 +1,20 @@
 sudo apt-get update
 
-echo 'installing curl' 
+echo '>>> Installing curl' 
 sudo apt install curl -y
 
-echo 'installing git' 
+echo '>>> Installing git' 
 sudo apt install git -y
 
 echo 'enabling workspaces for both screens' 
 gsettings set org.gnome.mutter workspaces-only-on-primary false
 
-echo 'installing zsh'
+echo '>>> Installing zsh'
 sudo apt-get install zsh -y
 sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 chsh -s /bin/zsh
 
-echo 'installing code'
+echo '>>> Installing code'
 curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
 sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
 sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
@@ -22,7 +22,7 @@ sudo apt-get install apt-transport-https -y
 sudo apt-get update
 sudo apt-get install code -y # or code-insiders
 
-echo 'installing extensions'
+echo '>>> Installing extensions'
 code --install-extension hookyqr.beautify
 code --install-extension michelemelluso.code-beautifier
 code --install-extension formulahendry.code-runner
@@ -45,14 +45,14 @@ code --install-extension wakatime.vscode-wakatime
 code --install-extension gruntfuggly.todo-tree
 code --install-extension kruemelkatze.vscode-dashboard
 
-echo 'installing spotify' 
+echo '>>> Installing spotify' 
 snap install spotify
 
-echo 'installing chrome' 
+echo '>>> Installing chrome' 
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome-stable_current_amd64.deb
 
-echo 'installing nvm' 
+echo '>>> Installing nvm' 
 sh -c "$(curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash)"
 
 export NVM_DIR="$HOME/.nvm" && (
@@ -71,17 +71,17 @@ nvm alias default 12
 node --version
 npm --version
 
-echo 'installing autosuggestions' 
+echo '>>> Installing autosuggestions' 
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
 echo "source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh" >> ~/.zshrc
 source ~/.zshrc
 
-echo 'installing dracula'
+echo '>>> Installing dracula'
 sudo apt-get install dconf-cli
 git clone https://github.com/dracula/gnome-terminal
 cd gnome-terminal
 ./install.sh
 
-echo 'installing slack' 
+echo '>>> Installing slack' 
 wget https://downloads.slack-edge.com/linux_releases/slack-desktop-3.3.8-amd64.deb
 sudo apt install ./slack-desktop-*.deb -y

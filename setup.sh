@@ -44,6 +44,7 @@ code --install-extension tht13.python
 code --install-extension wakatime.vscode-wakatime
 code --install-extension gruntfuggly.todo-tree
 code --install-extension kruemelkatze.vscode-dashboard
+code --install-extension tabnine.tabnine-
 
 echo '>>> Installing spotify' 
 snap install spotify

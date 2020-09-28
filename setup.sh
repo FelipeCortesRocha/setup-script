@@ -20,7 +20,7 @@ sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
 sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
 sudo apt-get install apt-transport-https -y
 sudo apt-get update
-sudo apt-get install code -y # or code-insiders
+sudo apt-get install code -y
 
 echo '>>> Installing extensions'
 code --install-extension hookyqr.beautify
@@ -44,7 +44,6 @@ code --install-extension tht13.python
 code --install-extension wakatime.vscode-wakatime
 code --install-extension gruntfuggly.todo-tree
 code --install-extension kruemelkatze.vscode-dashboard
-code --install-extension tabnine.tabnine-vscode
 
 echo '>>> Installing spotify' 
 snap install spotify
